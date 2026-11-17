@@ -81,7 +81,7 @@ function Kontakt() {
             </h2>
             <Link
               to="/"
-              className="border border-background/40 px-5 py-2.5 text-sm font-semibold text-background hover:bg-background/10"
+              className="bg-background px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-background/90"
             >
               Zurück zu unseren Leistungen
             </Link>
