@@ -6,14 +6,14 @@ import fertigImg from "@/assets/fertig-projekt.jpg";
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt – Bau & Dienstleistungen aller Art" },
+      { title: "Kontakt – RKE Bau & Dienstleistungen aller Art" },
       {
         name: "description",
         content: "Kontaktieren Sie uns für ein unverbindliches Angebot.",
       },
       {
         property: "og:title",
-        content: "Kontakt – Bau & Dienstleistungen aller Art",
+        content: "Kontakt – RKE Bau & Dienstleistungen aller Art",
       },
       {
         property: "og:description",
@@ -29,7 +29,7 @@ function Kontakt() {
     <SiteShell>
       <section className="mx-auto grid max-w-5xl items-center gap-10 px-6 py-14 md:grid-cols-[1fr_1fr] md:gap-14 md:py-20">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             Kontakt
           </p>
           <h1 className="mt-4 font-display text-4xl font-bold md:text-5xl">
@@ -41,15 +41,15 @@ function Kontakt() {
           </p>
           <dl className="mt-10 grid gap-6">
             <div>
-              <dt className="text-sm font-semibold text-primary">Telefon</dt>
+              <dt className="text-sm font-semibold text-accent">Telefon</dt>
               <dd className="mt-1 text-lg">0123 456789</dd>
             </div>
             <div>
-              <dt className="text-sm font-semibold text-primary">E-Mail</dt>
+              <dt className="text-sm font-semibold text-accent">E-Mail</dt>
               <dd className="mt-1 text-lg">info@beispiel.de</dd>
             </div>
             <div>
-              <dt className="text-sm font-semibold text-primary">Adresse</dt>
+              <dt className="text-sm font-semibold text-accent">Adresse</dt>
               <dd className="mt-1 text-lg">Musterstraße 1, 12345 Musterstadt</dd>
             </div>
           </dl>
@@ -73,7 +73,7 @@ function Kontakt() {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/75" />
+        <div className="absolute inset-0 bg-primary/85" />
         <div className="relative mx-auto w-full max-w-5xl px-6 py-16">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="font-display text-2xl font-bold text-background md:text-3xl">
@@ -105,7 +105,7 @@ function Kontakt() {
               },
             ].map((s) => (
               <li key={s.n}>
-                <span className="font-display text-sm text-primary">{s.n}</span>
+                <span className="font-display text-sm text-accent">{s.n}</span>
                 <h3 className="mt-1 text-lg font-semibold text-background">
                   {s.t}
                 </h3>

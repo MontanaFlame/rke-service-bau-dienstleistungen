@@ -11,13 +11,13 @@ import fertigImg from "@/assets/fertig-projekt.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bau & Dienstleistungen aller Art" },
+      { title: "RKE – Bau & Dienstleistungen aller Art" },
       {
         name: "description",
         content:
           "Renovierung, Innenausbau, Pflasterarbeiten und Abbruch – zuverlässig aus einer Hand.",
       },
-      { property: "og:title", content: "Bau & Dienstleistungen aller Art" },
+      { property: "og:title", content: "RKE – Bau & Dienstleistungen aller Art" },
       {
         property: "og:description",
         content:
@@ -58,91 +58,51 @@ const services = [
 function Index() {
   return (
     <SiteShell>
-      <section className="border-b border-border">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 py-14 md:grid-cols-[1.05fr_1fr] md:gap-14 md:py-20">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-              Bau & Dienstleistungen
-            </p>
-            <h1 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight md:text-6xl">
-              Solide Arbeit. Faire Preise. Alles aus einer Hand.
+      <section className="grid md:grid-cols-2">
+        <div className="flex items-center bg-primary px-6 py-16 text-primary-foreground md:rounded-br-3xl md:px-12 lg:pl-[max(3rem,calc((100vw-72rem)/2+1.5rem))]">
+          <div className="max-w-lg">
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl">
+              Solide Arbeit.<br />Ihr Bauprojekt in besten Händen.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Ob kleine Reparatur oder großes Bauprojekt – wir packen an und
-              liefern verlässlich ab.
+            <p className="mt-6 text-primary-foreground/80">
+              Herzlich willkommen bei RKE – Ihrem Partner für Bau und
+              Dienstleistungen aller Art. Vom kleinen Auftrag bis zum großen Projekt.
             </p>
-            <Link
-              to="/kontakt"
-              className="mt-10 inline-block bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90"
-            >
+            <Link to="/kontakt" className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground hover:bg-accent/90">
               Angebot anfragen
             </Link>
           </div>
-          <img
-            src={heroImg}
-            alt="Zwei Bauarbeiter verlegen Betonsteinpflaster auf einer neuen Einfahrt"
-            width={1600}
-            height={912}
-            loading="eager"
-            fetchPriority="high"
-            className="h-full max-h-[26rem] w-full object-cover md:max-h-none"
-          />
         </div>
+        <img src={heroImg} alt="Zwei Bauarbeiter verlegen Betonsteinpflaster auf einer neuen Einfahrt" width={1600} height={912} loading="eager" fetchPriority="high" className="h-72 w-full object-cover md:h-full md:min-h-[32rem]" />
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="font-display text-3xl font-bold">Unsere Leistungen</h2>
-        <p className="mt-3 max-w-xl text-muted-foreground">
-          Ein Ansprechpartner für alle Gewerke – koordiniert, termintreu und
-          zum vorher vereinbarten Preis.
-        </p>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          {services.map((s, i) => (
-            <article key={s.title} className="border border-border bg-card">
-              <img
-                src={s.img}
-                alt={s.alt}
-                width={1200}
-                height={800}
-                loading="lazy"
-                className="aspect-[3/2] w-full object-cover"
-              />
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-sm font-semibold text-accent">Leistungen</p>
+        <h2 className="mt-1 text-3xl font-bold text-primary">Alles aus einer Hand</h2>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {services.map((s) => (
+            <article key={s.title} className="overflow-hidden rounded-xl bg-card shadow-sm">
+              <img src={s.img} alt={s.alt} width={1200} height={800} loading="lazy" className="aspect-[3/2] w-full object-cover" />
               <div className="p-6">
-                <span className="font-display text-sm text-primary">
-                  0{i + 1}
-                </span>
-                <h3 className="mt-1 text-xl font-semibold">{s.title}</h3>
+                <p className="text-sm font-semibold text-accent">{s.title}</p>
+                <h3 className="mt-1 text-xl font-bold">{s.title}, die überzeugt</h3>
                 <p className="mt-2 text-muted-foreground">{s.text}</p>
+                <Link to="/kontakt" className="mt-4 inline-block rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-primary hover:bg-secondary/70">
+                  Mehr erfahren
+                </Link>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="relative flex flex-1 items-center overflow-hidden border-t border-border">
-        <img
-          src={fertigImg}
-          alt="Fertiggestellte Fassade mit neu verlegter Einfahrt im Abendlicht"
-          width={1600}
-          height={800}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/75" />
-        <div className="relative mx-auto max-w-5xl px-6 py-20">
-          <h2 className="max-w-xl font-display text-3xl font-bold text-background md:text-4xl">
-            Von der ersten Besichtigung bis zur sauberen Übergabe.
-          </h2>
-          <p className="mt-4 max-w-lg text-background/80">
-            Sagen Sie uns, was zu tun ist – Sie erhalten ein unverbindliches
-            Angebot mit klarer Aufstellung.
-          </p>
-          <Link
-            to="/kontakt"
-            className="mt-8 inline-block bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90"
-          >
-            Kontakt aufnehmen
-          </Link>
+      <section className="relative flex flex-1 items-center overflow-hidden">
+        <img src={fertigImg} alt="Fertiggestellte Fassade mit neu verlegter Einfahrt im Abendlicht" width={1600} height={800} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="relative mx-auto max-w-6xl px-6 py-20 text-primary-foreground">
+          <h2 className="max-w-xl text-3xl font-bold md:text-4xl">Von der ersten Besichtigung bis zur sauberen Übergabe.</h2>
+          <p className="mt-4 max-w-lg text-primary-foreground/80">Sie erhalten ein unverbindliches Angebot mit klarer Aufstellung.</p>
+          <Link to="/kontakt" className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground hover:bg-accent/90">Kontakt aufnehmen</Link>
         </div>
       </section>
     </SiteShell>
