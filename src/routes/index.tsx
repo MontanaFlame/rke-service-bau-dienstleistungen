@@ -31,24 +31,28 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     title: "Renovierung",
+    slogan: "Wieder wie neu – ohne Umzug.",
     text: "Wir modernisieren Wohnungen, Häuser und Gewerberäume – von der Wand bis zum Boden.",
     img: renovierungImg,
     alt: "Maler streicht eine Wand in einer hellen, leeren Wohnung",
   },
   {
     title: "Innenausbau",
+    slogan: "Mehr Raum, so wie Sie ihn brauchen.",
     text: "Trockenbau, Decken, Böden und Türen: sauber geplant und präzise umgesetzt.",
     img: innenausbauImg,
     alt: "Trockenbauer montiert eine Gipskartonwand in einem Rohraum",
   },
   {
     title: "Pflasterarbeiten",
+    slogan: "Einfahrten, die auch nach 20 Jahren gerade liegen.",
     text: "Einfahrten, Terrassen und Wege – langlebig verlegt und fachgerecht verdichtet.",
     img: pflasterImg,
     alt: "Pflasterleger setzt Betonsteine mit Gummihammer und Wasserwaage",
   },
   {
     title: "Abbruch",
+    slogan: "Was weg muss, ist über Nacht weg.",
     text: "Kontrollierter Rückbau und Entkernung inklusive fachgerechter Entsorgung.",
     img: abbruchImg,
     alt: "Bagger mit Aufsatzhammer stemmt eine alte Innenwand",
@@ -62,7 +66,7 @@ function Index() {
         <div className="flex items-center bg-primary px-6 py-16 text-primary-foreground md:rounded-br-3xl md:px-12 lg:pl-[max(3rem,calc((100vw-72rem)/2+1.5rem))]">
           <div className="max-w-lg">
             <h1 className="text-3xl font-bold leading-tight md:text-5xl">
-              Solide Arbeit.<br />Ihr Bauprojekt in besten Händen.
+              Angepackt, sauber fertig, übergeben.<br />Ein Anruf, ein Ansprechpartner.
             </h1>
             <p className="mt-6 text-primary-foreground/80">
               Herzlich willkommen bei RKE – Ihrem Partner für Bau und
@@ -85,7 +89,7 @@ function Index() {
               <img src={s.img} alt={s.alt} width={1200} height={800} loading="lazy" className="aspect-[3/2] w-full object-cover" />
               <div className="p-6">
                 <p className="text-sm font-semibold text-accent">{s.title}</p>
-                <h3 className="mt-1 text-xl font-bold">{s.title}, die überzeugt</h3>
+                <h3 className="mt-1 text-xl font-bold">{s.slogan}</h3>
                 <p className="mt-2 text-muted-foreground">{s.text}</p>
                 <Link to="/kontakt" className="mt-4 inline-block rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-primary hover:bg-secondary/70">
                   Mehr erfahren
