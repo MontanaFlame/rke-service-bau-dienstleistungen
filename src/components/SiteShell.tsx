@@ -11,7 +11,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <header className="bg-card shadow-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="RKE Logo" className="h-10 w-auto" />
+            <img src={logo.url} alt="RKE-Service Logo" className="h-10 w-auto" />
             <span className="hidden border-l border-border pl-3 text-xs font-semibold uppercase leading-tight tracking-widest text-muted-foreground sm:block">
               Bau &<br />Dienstleistungen
             </span>
@@ -25,7 +25,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <main className="flex flex-1 flex-col">{children}</main>
       <footer className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-sm">
-          <span>© {new Date().getFullYear()} RKE – Bau & Dienstleistungen aller Art</span>
+          <span>© {new Date().getFullYear()} RKE-Service – Bau & Dienstleistungen aller Art</span>
           <Link to="/kontakt" className="text-accent hover:underline">Kontakt aufnehmen</Link>
         </div>
       </footer>

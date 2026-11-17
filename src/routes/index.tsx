@@ -11,13 +11,13 @@ import fertigImg from "@/assets/fertig-projekt.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RKE – Bau & Dienstleistungen aller Art" },
+      { title: "RKE-Service – Bau & Dienstleistungen aller Art" },
       {
         name: "description",
         content:
           "Renovierung, Innenausbau, Pflasterarbeiten und Abbruch – zuverlässig aus einer Hand.",
       },
-      { property: "og:title", content: "RKE – Bau & Dienstleistungen aller Art" },
+      { property: "og:title", content: "RKE-Service – Bau & Dienstleistungen aller Art" },
       {
         property: "og:description",
         content:
@@ -69,7 +69,7 @@ function Index() {
               Angepackt, sauber fertig, übergeben.<br />Ein Anruf, ein Ansprechpartner.
             </h1>
             <p className="mt-6 text-primary-foreground/80">
-              Herzlich willkommen bei RKE – Ihrem Partner für Bau und
+              Herzlich willkommen bei RKE-Service – Ihrem Partner für Bau und
               Dienstleistungen aller Art. Vom kleinen Auftrag bis zum großen Projekt.
             </p>
             <Link to="/kontakt" className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground hover:bg-accent/90">

@@ -6,14 +6,14 @@ import fertigImg from "@/assets/fertig-projekt.jpg";
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt – RKE Bau & Dienstleistungen aller Art" },
+      { title: "Kontakt – RKE-Service Bau & Dienstleistungen aller Art" },
       {
         name: "description",
         content: "Kontaktieren Sie uns für ein unverbindliches Angebot.",
       },
       {
         property: "og:title",
-        content: "Kontakt – RKE Bau & Dienstleistungen aller Art",
+        content: "Kontakt – RKE-Service Bau & Dienstleistungen aller Art",
       },
       {
         property: "og:description",
@@ -36,21 +36,25 @@ function Kontakt() {
             Reden wir über Ihr Projekt.
           </h1>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            Rufen Sie uns an oder schreiben Sie uns – wir melden uns
+            Schreiben Sie uns – wir melden uns
             schnellstmöglich mit einem unverbindlichen Angebot.
           </p>
           <dl className="mt-10 grid gap-6">
             <div>
-              <dt className="text-sm font-semibold text-accent">Telefon</dt>
-              <dd className="mt-1 text-lg">0123 456789</dd>
+              <dt className="text-sm font-semibold text-accent">E-Mail</dt>
+              <dd className="mt-1 text-lg">
+                <a href="mailto:info@rke-service.de" className="hover:text-accent">
+                  info@rke-service.de
+                </a>
+              </dd>
             </div>
             <div>
-              <dt className="text-sm font-semibold text-accent">E-Mail</dt>
-              <dd className="mt-1 text-lg">info@beispiel.de</dd>
+              <dt className="text-sm font-semibold text-accent">Telefon</dt>
+              <dd className="mt-1 text-lg text-muted-foreground">Folgt in Kürze</dd>
             </div>
             <div>
               <dt className="text-sm font-semibold text-accent">Adresse</dt>
-              <dd className="mt-1 text-lg">Musterstraße 1, 12345 Musterstadt</dd>
+              <dd className="mt-1 text-lg text-muted-foreground">Folgt in Kürze</dd>
             </div>
           </dl>
         </div>
