@@ -5,7 +5,7 @@ import heroImg from "@/assets/hero-pflaster.jpg";
 import renovierungImg from "@/assets/leistung-renovierung.jpg";
 import innenausbauImg from "@/assets/leistung-innenausbau.jpg";
 import pflasterImg from "@/assets/leistung-pflaster.jpg";
-import abbruchImg from "@/assets/leistung-abbruch.jpg";
+import entruempelungImg from "@/assets/leistung-entruempelung.jpg";
 import fertigImg from "@/assets/fertig-projekt.jpg";
 
 export const Route = createFileRoute("/")({
@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Renovierung, Innenausbau, Pflasterarbeiten und Abbruch – zuverlässig aus einer Hand.",
+          "Renovierung, Innenausbau, Pflasterarbeiten und Entrümpelung – zuverlässig aus einer Hand.",
       },
       { property: "og:title", content: "RKE-Service – Bau & Dienstleistungen aller Art" },
       {
         property: "og:description",
         content:
-          "Renovierung, Innenausbau, Pflasterarbeiten und Abbruch – zuverlässig aus einer Hand.",
+          "Renovierung, Innenausbau, Pflasterarbeiten und Entrümpelung – zuverlässig aus einer Hand.",
       },
     ],
   }),
@@ -51,11 +51,11 @@ const services = [
     alt: "Pflasterleger setzt Betonsteine mit Gummihammer und Wasserwaage",
   },
   {
-    title: "Abbruch",
-    slogan: "Was weg muss, ist über Nacht weg.",
-    text: "Kontrollierter Rückbau und Entkernung inklusive fachgerechter Entsorgung.",
-    img: abbruchImg,
-    alt: "Bagger mit Aufsatzhammer stemmt eine alte Innenwand",
+    title: "Entrümpelung",
+    slogan: "Voll wird leer – ohne dass Sie selbst schleppen.",
+    text: "Keller, Dachboden, Wohnung oder Betrieb: wir räumen komplett, sortieren und entsorgen fachgerecht.",
+    img: entruempelungImg,
+    alt: "Zwei Entrümpler tragen ein demontiertes Regal und einen Karton aus einem Haus zum Transporter",
   },
 ];
 
