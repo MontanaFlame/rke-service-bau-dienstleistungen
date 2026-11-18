@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "Entrümpelung",
-    slogan: "Voll wird leer – ohne dass Sie selbst schleppen.",
+    slogan: "Entspannt entrümpeln: Wir packen an, Sie atmen auf.",
     text: "Keller, Dachboden, Wohnung oder Betrieb: wir räumen komplett, sortieren und entsorgen fachgerecht.",
     img: entruempelungImg,
     alt: "Zwei Entrümpler tragen ein demontiertes Regal und einen Karton aus einem Haus zum Transporter",
