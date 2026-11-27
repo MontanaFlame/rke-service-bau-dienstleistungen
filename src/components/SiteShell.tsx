@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import logo from "@/assets/rke-logo.png.asset.json";
+import logo from "@/assets/rke-logo-clean.png.asset.json";
 
 const navCls = "border-b-2 border-transparent pb-1 hover:text-primary";
 const active = { className: "border-accent text-primary" };
@@ -11,7 +11,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <header className="bg-card shadow-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="RKE-Service Logo" className="h-10 w-auto" />
+            <img src={logo.url} alt="RKE-Service Logo" width={1168} height={441} className="h-auto w-32 shrink-0 object-contain sm:w-40" />
             <span className="hidden border-l border-border pl-3 text-xs font-semibold uppercase leading-tight tracking-widest text-muted-foreground sm:block">
               Bau &<br />Dienstleistungen
             </span>
