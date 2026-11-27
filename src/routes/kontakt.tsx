@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
+import { TerminBuchung } from "@/components/TerminBuchung";
 import teamImg from "@/assets/team-van.jpg";
 import fertigImg from "@/assets/fertig-projekt.jpg";
 
@@ -9,7 +10,7 @@ export const Route = createFileRoute("/kontakt")({
       { title: "Kontakt – RKE-Service Bau & Dienstleistungen aller Art" },
       {
         name: "description",
-        content: "Kontaktieren Sie uns für ein unverbindliches Angebot.",
+        content: "Kontakt und Terminbuchung für ein unverbindliches Angebot.",
       },
       {
         property: "og:title",
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/kontakt")({
       },
       {
         property: "og:description",
-        content: "Kontaktieren Sie uns für ein unverbindliches Angebot.",
+        content: "Kontakt und Terminbuchung für ein unverbindliches Angebot.",
       },
     ],
   }),
@@ -68,6 +69,8 @@ function Kontakt() {
         />
       </section>
 
+      <TerminBuchung />
+
       <section className="relative flex flex-1 items-center overflow-hidden border-t border-border">
         <img
           src={fertigImg}
@@ -95,7 +98,7 @@ function Kontakt() {
               {
                 n: "01",
                 t: "Kurz schildern",
-                d: "Sie sagen uns telefonisch oder per E-Mail, was ansteht.",
+                d: "Sie sagen uns per E-Mail oder über das Terminformular, was ansteht.",
               },
               {
                 n: "02",
