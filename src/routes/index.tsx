@@ -2,10 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
 
 import heroImg from "@/assets/hero-pflaster.jpg";
-import renovierungImg from "@/assets/leistung-renovierung.jpg";
-import innenausbauImg from "@/assets/leistung-innenausbau.jpg";
-import pflasterImg from "@/assets/leistung-pflaster.jpg";
+import reinigungImg from "@/assets/leistung-reinigung.jpg";
 import entruempelungImg from "@/assets/leistung-entruempelung.jpg";
+import transportImg from "@/assets/leistung-transport.jpg";
+import abbruchImg from "@/assets/leistung-abbruch.jpg";
+import abrissImg from "@/assets/leistung-abriss.jpg";
 import fertigImg from "@/assets/fertig-projekt.jpg";
 
 export const Route = createFileRoute("/")({
@@ -15,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Renovierung, Innenausbau, Pflasterarbeiten und Entrümpelung – zuverlässig aus einer Hand.",
+          "Reinigung, Entrümpelung, Transport, Abbruch und Abriss – zuverlässig aus einer Hand.",
       },
       { property: "og:title", content: "RKE-Service – Bau & Dienstleistungen aller Art" },
       {
         property: "og:description",
         content:
-          "Renovierung, Innenausbau, Pflasterarbeiten und Entrümpelung – zuverlässig aus einer Hand.",
+          "Reinigung, Entrümpelung, Transport, Abbruch und Abriss – zuverlässig aus einer Hand.",
       },
     ],
   }),
@@ -30,25 +31,11 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    title: "Renovierung",
-    slogan: "Wieder wie neu – ohne Umzug.",
-    text: "Wir modernisieren Wohnungen, Häuser und Gewerberäume – von der Wand bis zum Boden.",
-    img: renovierungImg,
-    alt: "Maler streicht eine Wand in einer hellen, leeren Wohnung",
-  },
-  {
-    title: "Innenausbau",
-    slogan: "Mehr Raum, so wie Sie ihn brauchen.",
-    text: "Trockenbau, Decken, Böden und Türen: sauber geplant und präzise umgesetzt.",
-    img: innenausbauImg,
-    alt: "Trockenbauer montiert eine Gipskartonwand in einem Rohraum",
-  },
-  {
-    title: "Pflasterarbeiten",
-    slogan: "Einfahrten, die auch nach 20 Jahren gerade liegen.",
-    text: "Einfahrten, Terrassen und Wege – langlebig verlegt und fachgerecht verdichtet.",
-    img: pflasterImg,
-    alt: "Pflasterleger setzt Betonsteine mit Gummihammer und Wasserwaage",
+    title: "Reinigung",
+    slogan: "Nach unserem Besuch ist es sauberer als vorher.",
+    text: "Unterhaltsreinigung, Grundreinigung und Reinigung nach Abschluss – für Wohnungen, Büros und Gewerbe.",
+    img: reinigungImg,
+    alt: "Reinigungskraft wischt den Boden eines hellen Büros",
   },
   {
     title: "Entrümpelung",
@@ -56,6 +43,28 @@ const services = [
     text: "Keller, Dachboden, Wohnung oder Betrieb: wir räumen komplett, sortieren und entsorgen fachgerecht.",
     img: entruempelungImg,
     alt: "Zwei Entrümpler tragen ein demontiertes Regal und einen Karton aus einem Haus zum Transporter",
+  },
+  {
+    title: "Transport",
+    slogan: "Wir laden ein, fahren und wieder aus – Sie müssen nichts tragen.",
+    text: "Möbel, Geräte, Material: wir holen ab, bringen hin und helfen beim Tragen – auch mit zwei Händen mehr.",
+    img: transportImg,
+    alt: "Zwei Männer laden Kartons und eine Matratze in einen weißen Transporter",
+  },
+  {
+    title: "Abbruch",
+    slogan: "Wände raus, Platz drin – Raum für Raum.",
+    text: "Innere Rückbauarbeiten: Wände, Böden und alte Einbauten werden ausgebaut und sofort abtransportiert.",
+    img: abbruchImg,
+    alt: "Arbeiter mit Helm und Staubmaske stemmt eine Innenwand auf",
+  },
+  {
+    title: "Abriss",
+    slogan: "Vom Haus zur freien Fläche – in einem Zug.",
+    text: "Gebäude, Garagen und Anbauten werden komplett abgerissen, das Grundstück leer und sauber übergeben.",
+    img: abrissImg,
+    alt: "Bagger mit Abbruchhammer reißt die Außenwand eines alten Hauses ab",
+    wide: true,
   },
 ];
 
@@ -85,17 +94,31 @@ function Index() {
         <h2 className="mt-1 text-3xl font-bold text-primary">Alles aus einer Hand</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {services.map((s) => (
-            <article key={s.title} className="overflow-hidden rounded-xl bg-card shadow-sm">
-              <img src={s.img} alt={s.alt} width={1200} height={800} loading="lazy" className="aspect-[3/2] w-full object-cover" />
-              <div className="p-6">
-                <p className="text-sm font-semibold text-accent">{s.title}</p>
-                <h3 className="mt-1 text-xl font-bold">{s.slogan}</h3>
-                <p className="mt-2 text-muted-foreground">{s.text}</p>
-                <Link to="/kontakt" className="mt-4 inline-block rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-primary hover:bg-secondary/70">
-                  Mehr erfahren
-                </Link>
-              </div>
-            </article>
+            s.wide ? (
+              <article key={s.title} className="overflow-hidden rounded-xl bg-card shadow-sm sm:col-span-2 sm:flex">
+                <img src={s.img} alt={s.alt} width={1200} height={800} loading="lazy" className="aspect-[3/2] w-full object-cover sm:aspect-auto sm:w-1/2" />
+                <div className="flex flex-col justify-center p-6 sm:w-1/2">
+                  <p className="text-sm font-semibold text-accent">{s.title}</p>
+                  <h3 className="mt-1 text-xl font-bold">{s.slogan}</h3>
+                  <p className="mt-2 text-muted-foreground">{s.text}</p>
+                  <Link to="/kontakt" className="mt-4 inline-block w-fit rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-primary hover:bg-secondary/70">
+                    Mehr erfahren
+                  </Link>
+                </div>
+              </article>
+            ) : (
+              <article key={s.title} className="overflow-hidden rounded-xl bg-card shadow-sm">
+                <img src={s.img} alt={s.alt} width={1200} height={800} loading="lazy" className="aspect-[3/2] w-full object-cover" />
+                <div className="p-6">
+                  <p className="text-sm font-semibold text-accent">{s.title}</p>
+                  <h3 className="mt-1 text-xl font-bold">{s.slogan}</h3>
+                  <p className="mt-2 text-muted-foreground">{s.text}</p>
+                  <Link to="/kontakt" className="mt-4 inline-block rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-primary hover:bg-secondary/70">
+                    Mehr erfahren
+                  </Link>
+                </div>
+              </article>
+            )
           ))}
         </div>
       </section>
