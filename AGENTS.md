@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Header logo is the inline SVG `src/components/RkeLogo.tsx` (traced from the original upload, fill=currentColor), not an image file — image versions repeatedly displayed poorly for the user.
